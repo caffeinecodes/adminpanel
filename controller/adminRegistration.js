@@ -3,8 +3,6 @@ const Constants = require('./../utils/consts.js');
 const hashProfile = require('./../utils/userProfile.js');
 const query = require('./../query/query.js');
 const crypto = require('crypto');
-
-
 const async = require('async');
 
 

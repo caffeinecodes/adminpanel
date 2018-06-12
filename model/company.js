@@ -1,13 +1,11 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-
-
-
 const Consts = require('../utils/consts.js');
 const moment = require('moment-timezone');
 const newYork    = moment.tz("America/New_York");
 
-const comapany = new Schema({
+
+const company = new Schema({
     company_name: { type: String, required: true},
     user_name:{ type: String, required: false,default:''},
     logo_url: { type: String, required: false,default:''},
@@ -19,4 +17,5 @@ const comapany = new Schema({
 }, { versionKey: false });
 
 
-module.exports = mongoose.model('comapany', comapany);
+
+module.exports = mongoose.model('company', company);

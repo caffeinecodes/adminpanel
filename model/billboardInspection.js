@@ -10,6 +10,7 @@ const newYork    = moment.tz("America/New_York");
 const billboardInspection = new Schema({
    company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
     user_id:[{ type: mongoose.Schema.ObjectId, ref: 'users'}],
+    sigh: { type: String, required: false, default:''},
     display_number: { type: String, required: false, default:''},
     permit_number:{ type: String, required: false,default:''},
     photo_url: { type: String, required: false,default:''},
