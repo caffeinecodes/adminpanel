@@ -3,8 +3,7 @@
 const express = require('express');
 const Uploader = require('s3-image-uploader');
 const config = require('./config.js');
-const db = require('./utils/db.js');
-const sms = require('./utils/twillioSms.js');
+
 const bodyParser = require('body-parser');
 
 

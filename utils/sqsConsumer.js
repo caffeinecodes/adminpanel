@@ -6,7 +6,7 @@ require('dotenv').config();
 let queueUrl = " ";
 const Consumer = require('sqs-consumer');
 
-//aws.config.loadFromPath(__dirname + '/config-sample.json');
+//aws.config.loadFromPath(__dirname + '/config.json');
 
 AWS.config.update({
     accessKeyId: process.env.accessKeyId,

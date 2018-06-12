@@ -5,7 +5,7 @@ let AWS      = require('aws-sdk');
 require('dotenv').config();
 let queueUrl = " ";
 
-//aws.config.loadFromPath(__dirname + '/config-sample.json');
+//aws.config.loadFromPath(__dirname + '/config.json');
 
 AWS.config.update({accessKeyId:process.env.accessKeyId, secretAccessKey: process.env.secretAccessKey, region: process.env.region});
 let sqs = new aws.SQS();
