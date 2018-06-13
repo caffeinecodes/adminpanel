@@ -4,7 +4,7 @@ const moment = require('moment-timezone');
 const newYork    = moment.tz("America/New_York");
 
 const billCycle = new Schema({
-    company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
+    company_id:{ type: mongoose.Schema.ObjectId, ref: 'company'},
     date: { type: String, required: true},
     fee:{ type: String, required: false,default:''},
     value_per_year: { type: String, required: false,default:''},

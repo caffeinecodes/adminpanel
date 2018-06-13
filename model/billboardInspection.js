@@ -8,8 +8,8 @@ const moment = require('moment-timezone');
 const newYork    = moment.tz("America/New_York");
 
 const billboardInspection = new Schema({
-   company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
-    user_id:[{ type: mongoose.Schema.ObjectId, ref: 'users'}],
+    company_id:{ type: mongoose.Schema.ObjectId, ref: 'company'},
+    user_id:{ type: mongoose.Schema.ObjectId, ref: 'users'},
     sigh: { type: String, required: false, default:''},
     display_number: { type: String, required: false, default:''},
     permit_number:{ type: String, required: false,default:''},
@@ -18,6 +18,10 @@ const billboardInspection = new Schema({
     latitude: { type: Number, required: true,default:0},
     longitude: { type: Number, required: true,default:0},
     city:{ type: String, required: false,default:''},
+    zip_code:{ type: String, required: false,default:''},
+    parcel_no:{ type: String, required: false,default:''},
+    street_no:{ type: String, required: false,default:''},
+    street_name:{ type: String, required: false,default:''},
     state:{ type: String, required: false,default:''},
     structure_type:{ type: String, required: false,default:''},
     display_size:{ type: String, required: false,default:''},

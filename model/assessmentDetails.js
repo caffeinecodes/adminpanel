@@ -6,7 +6,7 @@ const newYork    = moment.tz("America/New_York");
 
 
 const assessmentDetails = new Schema({
-    company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
+    company_id:{ type: mongoose.Schema.ObjectId, ref: 'company'},
     start_date: { type: String, required: false, default:''},
     end_date:{ type: String, required: false,default:''},
     valuation_cycle: { type: String, required: false,default:''},

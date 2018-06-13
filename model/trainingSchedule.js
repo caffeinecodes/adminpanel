@@ -8,7 +8,7 @@ const moment = require('moment-timezone');
 const newYork    = moment.tz("America/New_York");
 
 const trainingSchedule = new Schema({
-    company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
+    company_id:{ type: mongoose.Schema.ObjectId, ref: 'company'},
     date: { type: String, required: false, default:''},
     time: { type: String, required: false, default:''},
     contact: { type: String, required: false, default:''},

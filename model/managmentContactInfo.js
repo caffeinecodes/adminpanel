@@ -8,7 +8,7 @@ const moment = require('moment-timezone');
 const newYork    = moment.tz("America/New_York");
 
 const managmentContactInfo = new Schema({
-    company_id:[{ type: mongoose.Schema.ObjectId, ref: 'company'}],
+    company_id:{ type: mongoose.Schema.ObjectId, ref: 'company'},
 
     title: { type: String, required: false, default:''},
     name:{ type: String, required: false,default:''},
