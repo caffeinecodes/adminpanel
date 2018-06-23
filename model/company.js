@@ -7,7 +7,7 @@ const newYork    = moment.tz("America/New_York");
 
 const company = new Schema({
     company_name: { type: String, required: true},
-    user_name:{ type: String, required: false,default:''},
+    user_name:{ type: String, required: false,default:'', unique:true},
     logo_url: { type: String, required: false,default:''},
     password: { type: String, required: false,default:''},
     contact:{ type: String, required: false,default:''},

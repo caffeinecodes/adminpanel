@@ -3,11 +3,12 @@
 const express = require('express');
 const Uploader = require('s3-image-uploader');
 const config = require('./config.js');
+const db=require('./utils/db');
 
 const bodyParser = require('body-parser');
 
 
-const adminRegistration=require('./routes/adminRegistration');
+const adminRoutes=require('./routes/adminRoutes');
 const userRegistration=require('./routes/userSignUp');
 
 const app = express();
@@ -53,7 +54,7 @@ app.use(validator());
 app.use(bodyParser.json());
 
 
-app.use('/admin',adminRegistration);
+app.use('/admin',adminRoutes);
 app.use('/users',userRegistration);
 
 
